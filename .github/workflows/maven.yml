@@ -32,14 +32,14 @@ jobs:
 
 
     - name: Maven Clean Install
-      run: mvn clean install -Dcheckstyle.skip -pl apollo-api impl -am
+      run: mvn clean install -Dcheckstyle.skip -pl apollo-apiimpl -am
 
     - name: Run Maven Tests
-      run: mvn -pl apollo-api impl test -Dtest="com.spotify.apollo.route.MiddlewaresTest#asShouldSerializeResponseObjectAsJson"
+      run: mvn -pl apollo-apiimpl test -Dtest="com.spotify.apollo.route.MiddlewaresTest#asShouldSerializeResponseObjectAsJson"
       
 
     - name: Run Nondex Maven Plugin
-      run: mvn -pl  apollo-api impl test edu.illinois:nondex-maven-plugin:2.1.1:nondex -Dtest=="com.spotify.apollo.route.MiddlewaresTest#asShouldSerializeResponseObjectAsJson"
+      run: mvn -pl  apollo-apiimpl test edu.illinois:nondex-maven-plugin:2.1.1:nondex -Dtest=="com.spotify.apollo.route.MiddlewaresTest#asShouldSerializeResponseObjectAsJson"
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
     - name: Update dependency graph
       uses: advanced-security/maven-dependency-submission-action@571e99aab1055c2e71a1e2309b9691de18d6b7d6
