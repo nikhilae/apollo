@@ -8,11 +8,11 @@
     <parent>
         <groupId>com.spotify</groupId>
         <artifactId>foss-root</artifactId>
-        <packaging>pom</packaging>
         <version>10</version>
     </parent>
 
     <artifactId>apollo-parent</artifactId>
+    <packaging>pom</packaging>
     <version>1.20.5-SNAPSHOT</version>
     <packaging>pom</packaging>
 
